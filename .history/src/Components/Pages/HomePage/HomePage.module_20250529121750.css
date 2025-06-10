@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+}
+
+/* ============================================= */
+/* Container1 */
+
+.container1 {
+  display: flex;
+  width: 100%;
+  height: 1192px;
+  position: relative;
+  background-image: url('../images/Container1Bg.png');
+  background-repeat: no-repeat;
+  background-size: 110;
+}
+
+/* Container1*/
+/* =============================================*/
+/* Container2 */
+/* Container2 */
+/* =============================================*/
+/* Container3 */
+/* Container3 */
+/* =============================================*/
+/* Container4 */
+/* Container4 */
+/* =============================================*/
+/* Container5 */
+/* Container5 */
+/* =============================================*/
+/* Container6 */
+/* Container6 */
+/* =============================================*/
+/* Container */
+/* Container */
+/* =============================================*/
+/* Container */
+/* Container */
+/* =============================================*/

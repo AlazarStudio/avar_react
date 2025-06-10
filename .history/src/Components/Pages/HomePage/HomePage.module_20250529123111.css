@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+}
+
+/* ============================================= */
+/* Container1 */
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url('../images/Container1Bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  max-width: 1304px !important;
+}
+
+.block {
+  width: 739px;
+  height: 100%;
+  height: 314px;
+  outline: 1px solid red;
+  color: #fff;
+}
+
+.block
+
+/* Container1*/
+/* =============================================*/
+/* Container2 */
+/* Container2 */
+/* =============================================*/
+/* Container3 */
+/* Container3 */
+/* =============================================*/
+/* Container4 */
+/* Container4 */
+/* =============================================*/
+/* Container5 */
+/* Container5 */
+/* =============================================*/
+/* Container6 */
+/* Container6 */
+/* =============================================*/
+/* Container */
+/* Container */
+/* =============================================*/
+/* Container */
+/* Container */
+/* =============================================*/
