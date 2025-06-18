@@ -1,0 +1,27 @@
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container2Block {
+  display: flex;
+  gap: 53px;
+  width: 100%;
+  max-width: 1304px;
+  padding: 110px 0;
+}
+
+.container2Block img{
+    
+}
+
+.container2BlockRight {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+@media (max-width: 768px) {
+}
