@@ -1,0 +1,20 @@
+.container4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container4Block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1304px;
+  gap: 64px;
+  padding: ;
+}
+
+@media (max-width: 768px) {
+}

@@ -1,0 +1,27 @@
+.container5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container5Block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1304px;
+}
+
+.container5BlockGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container5BlockGroupEl{
+    width: ;
+}
+
+@media (max-width: 768px) {
+}

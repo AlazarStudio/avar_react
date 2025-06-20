@@ -1,0 +1,38 @@
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 476px;
+  width: 100%;
+  margin-top: 96px;
+}
+
+.container1Bg {
+  position: relative; /* Чтобы псевдоэлемент был позиционирован относительно родителя */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container1Bg::before {
+  content: ''; /* Псевдоэлемент не имеет содержания */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный цвет с 50% прозрачностью */
+  z-index: 1; /* Псевдоэлемент должен быть поверх изображения */
+}
+
+.container1Block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+}

@@ -1,0 +1,36 @@
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container3Block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1304px;
+}
+
+.container3BlockTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 520px;
+}
+
+.container3BlockTop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container3BlockBottom {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+}

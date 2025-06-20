@@ -1,0 +1,126 @@
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container3Block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1304px;
+  gap: 60px;
+}
+
+.container3BlockTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  width: 547px;
+  justify-content: center;
+}
+
+.container3BlockTop span:nth-of-type(1) {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.container3BlockTop span:nth-of-type(2) {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8c93a6;
+}
+
+.container3BlockBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container3BlockBottomEl {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 12px;
+  padding: 31px;
+  height: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.container3BlockBottomEl img {
+  width: 20px;
+}
+
+.container3BlockBottomEl span:nth-of-type(1) {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.container3BlockBottomEl span:nth-of-type(2) {
+  font-size: 20px;
+  font-weight: 400;
+  color: #8c93a6;
+  line-height: 150%;
+}
+
+@media (max-width: 768px) {
+  .container3 {
+  }
+
+  .container3Block {
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .container3BlockTop {
+    width: 100;
+  }
+
+  .container3BlockTop span:nth-of-type(1) {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .container3BlockTop span:nth-of-type(2) {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8c93a6;
+  }
+
+  .container3BlockBottom {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .container3BlockBottomEl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding: 31px;
+    height: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .container3BlockBottomEl img {
+    width: 20px;
+  }
+
+  .container3BlockBottomEl span:nth-of-type(1) {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .container3BlockBottomEl span:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 400;
+    color: #8c93a6;
+    line-height: 150%;
+  }
+}

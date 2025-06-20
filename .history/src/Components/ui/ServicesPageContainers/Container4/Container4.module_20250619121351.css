@@ -1,0 +1,15 @@
+.container4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container4Block {
+  display: flex;
+  width: 100%;
+  max-width: 1;
+}
+
+@media (max-width: 768px) {
+}

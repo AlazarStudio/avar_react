@@ -1,0 +1,36 @@
+.container2 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container2Block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1304px;
+  gap: 30px;
+  padding: 87px;
+}
+
+.container2Block span:nth-of-type(1) {
+  font-size: 64px;
+  font-weight: 700;
+  color: #000;
+}
+
+.container2Block span:nth-of-type(2) {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #8c93a6;
+  width: 100%;
+  max-width: 660px;
+}
+
+@media (max-width: 768px) {
+}

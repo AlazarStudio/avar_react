@@ -1,0 +1,37 @@
+.container5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container5Block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1304px;
+}
+
+.container5BlockGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container5BlockGroupEl {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+}
+
+.container5BlockGroupEl span:nth-of-type(1) {
+  color: #e55645;
+}
+
+.container5BlockGroupEl span:nth-of-type(1) span {
+  color: #e55645;
+}
+
+@media (max-width: 768px) {
+}

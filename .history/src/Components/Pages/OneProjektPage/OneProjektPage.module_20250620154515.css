@@ -1,0 +1,43 @@
+.oneProjectPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectHeader {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.projectImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.projectInfo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.projectInfo p {
+  font-size: 1.2rem;
+}
+
+.projectDetails {
+  margin-top: 30px;
+}
+
+.projectGallery {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.projectGallery img {
+  width: 300px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+}
