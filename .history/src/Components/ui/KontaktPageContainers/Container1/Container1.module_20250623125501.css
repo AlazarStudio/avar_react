@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 576px;
+}
+
+.container1 img {
+  width: 100%;
+  height: ;
+}
+
+.container1Block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1304px;
+}
+
+@media (max-width: 768px) {
+}
