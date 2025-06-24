@@ -1,0 +1,29 @@
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container2Block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1304px;
+  p
+}
+
+.container2BlockLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.container2BlockRight {
+  display: flex;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+}

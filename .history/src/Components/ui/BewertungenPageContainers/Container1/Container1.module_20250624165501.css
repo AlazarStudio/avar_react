@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 576px;
+  position: relative;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: c;
+}
+
+@media (max-width: 768px) {
+}

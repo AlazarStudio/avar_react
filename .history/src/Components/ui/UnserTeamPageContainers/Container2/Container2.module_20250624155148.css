@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.containerBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1304px;
+  padding: 0 103px;
+}
+
+.containerBlockElLeft {
+  display: flex;
+  aib
+  height: 356px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+}

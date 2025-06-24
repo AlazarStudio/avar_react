@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container img:nth-of-type(1){
+  
+}
+
+@media (max-width: 768px) {
+}

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.containerBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1304px;
+  padding:  103px;
+}
+
+.containerBlockElLeft {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+}

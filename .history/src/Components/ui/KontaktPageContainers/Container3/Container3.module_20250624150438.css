@@ -1,0 +1,13 @@
+.container3 {
+  display: flex;
+  width: 100%;
+}
+
+.container3Map {
+  width: 100%;
+  height: 600px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+}

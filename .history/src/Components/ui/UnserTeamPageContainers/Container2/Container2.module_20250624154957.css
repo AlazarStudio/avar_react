@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.containerBlock{
+  display: flex;
+  
+}
+
+@media (max-width: 768px) {
+}
