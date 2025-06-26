@@ -1,0 +1,82 @@
+
+.sectionWrapper {
+  background: white;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+.gallery_top {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.gallery_mainImage {
+  width: 55%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.gallery_content {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.gallery_content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.gallery_content p {
+  color: #444;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.gallery_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.gallery_thumbs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px;
+}
+
+.gallery_thumbs img {
+  width: 88px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery_thumbs img.active,
+.gallery_thumbs img:hover {
+  opacity: 1;
+  border: 2px solid #f40087;
+}
+
+.gallery_pagination {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  margin-top: 12px;
+}

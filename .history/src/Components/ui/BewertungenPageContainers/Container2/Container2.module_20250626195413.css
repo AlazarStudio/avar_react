@@ -1,0 +1,70 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galleryMain {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mainImage {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  transition: 0.3s ease;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.galleryBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.thumb {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.thumb:hover {
+  opacity: 1;
+}
+
+.active {
+  width: 100px;
+  height: 70px;
+  opacity: 1;
+  border: 2px solid #e5097f;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 10px;
+  font-weight: bold;
+}

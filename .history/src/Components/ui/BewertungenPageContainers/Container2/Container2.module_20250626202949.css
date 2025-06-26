@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1304px;
+  padding: 40px;
+  background: white;
+  font-family: sans-serif;
+}
+
+.carousel {
+  display: flex;
+  align-items: end;
+  /* justify-content: center; */
+  gap: 36px;
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.center {
+  width: clamp(500px, 10vw, 960px);
+  height: clamp(360px, 36vw, 570px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  cursor: default;
+  border-radius: 2vw;
+}
+
+.sideLeft,
+.sideRight {
+  width: clamp(220px, 20vw, 337px);
+  height: clamp(140px, 14vw, 221px);
+  transform: scale(0.9);
+  border-radius: 1.2vw;
+}
+
+.textBlock {
+  position: absolute;
+  top: 0;
+  right: 12vw;
+  width: clamp(280px, 40%, 526px);
+  height: 53%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.textBlock span:nth-of-type(1) {
+  font-size: clamp(24px, 2.8vw, 40px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.textBlock span:nth-of-type(2) {
+  font-size: clamp(14px, 1.5vw, 20px);
+  line-height: 1.5;
+  color: #555;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
