@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.sectionWrapper {
+  width: 100%;
+  max-width: 1800px;
+  padding: 0 20px;
+}
+
+.carousel :global(.swiper) {
+  overflow: visible;
+  padding-bottom: 30px;
+  align-items: flex-end;
+}
+
+.carousel :global(.swiper-slide) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: auto !important;
+  flex: none !important;
+  transition: transform 0.3s ease;
+}
+
+/* маленькие слайды */
+.slide {
+  width: 200px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* активный слайд */
+.activeSlide {
+  width: 963px;
+  height: 573px;
+  border-radius: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* описание внутри активного слайда */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  padding-top: 10px;
+}
+
+.textBlock span:nth-of-type(1) {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.textBlock span:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 400;
+  color: #999;
+  line-height: 1.5;
+}
+
+/* стрелки */
+.carousel :global(.swiper-button-prev),
+.carousel :global(.swiper-button-next) {
+  color: #000;
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel :global(.swiper-button-prev) {
+  left: -50px;
+}
+.carousel :global(.swiper-button-next) {
+  right: -50px;
+}
+
+/* адаптив при необходимости */
+@media screen and (max-width: 1024px) {
+  .activeSlide {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .textBlock {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+
+  .slide {
+    width: 150px;
+    height: 100px;
+  }
+}
