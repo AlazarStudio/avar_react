@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  /* background-color: #fff; */
+}
+
+@media (max-width: 768px) {
+}

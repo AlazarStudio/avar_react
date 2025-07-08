@@ -1,0 +1,66 @@
+import React from 'react';
+import { Admin, Resource } from 'react-admin';
+import simpleRestProvider from 'ra-data-simple-rest';
+import polyglotI18nProvider from 'ra-i18n-polyglot';
+import russianMessages from 'ra-language-russian';
+import { createBrowserHistory } from 'history';
+
+import authProvider from './JS/authProvider';
+import LoginPage from './LoginPage';
+import serverConfig from '../../../serverConfig';
+import { fetchJsonWithToken } from './JS/fetchJsonWithToken';
+
+import {
+  CategoriesCreate,
+  CategoriesEdit,
+  CategoriesList,
+} from './ProductsComponent/CategoriesComponent';
+import {
+  ProjectCreate,
+  ProjectEdit,
+  ProjectList,
+} from './ProductsComponent/ProjectComponent';
+import {
+  FeedbackCreate,
+  FeedbackEdit,
+  FeedbackList,
+} from './ProductsComponent/FeedbackComponent';
+import {
+  BeratungCreate,
+  BeratungList,
+} from './ProductsComponent/BeratungComponent';
+
+
+const dataProvider = simpleRestProvider(`${serverConfig}`, fetchJsonWithToken);
+const i18nProvider = polyglotI18nProvider(() => russianMessages, 'ru');
+
+const AdminPage = () => (
+  <Admin
+    dataProvider={dataProvider}
+    i18nProvider={i18nProvider}
+    authProvider={authProvider}
+    loginPage={<LoginPage />}
+  >
+    <Resource
+      name="projects"
+      list={ProjectList}
+      create={ProjectCreate}
+      edit={ProjectEdit}
+    />
+    <Resource
+      name="categories"
+      list={CategoriesList}
+      create={CategoriesCreate}
+      edit={CategoriesEdit}
+    />
+    <Resource
+      name="feedbacks"
+      list={FeedbackList}
+      create={FeedbackCreate}
+      edit={FeedbackEdit}
+    />
+    <Resource name="beratungs" list={BeratungList} create={BeratungCreate} />
+  </Admin>
+);
+
+export default AdminPage;

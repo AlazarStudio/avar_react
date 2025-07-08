@@ -1,29 +1,26 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* font-family: 'Arial', sans-serif; */
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 :root {
-  --blockWidth: 1300px;
+    --blockWidth: 1300px;
 }
 
 body {
-  /* font-family: 'Arial', sans-serif; */
-  font-family: 'Inter', sans-serif;
-  background-color: #FFFFFF;
+    background-color: #ECECEC;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding-bottom: 80px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-bottom: 80px; */
 }
