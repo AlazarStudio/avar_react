@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './Container3.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { handwerks } from '../../../../../bd';
+import axios from 'axios';
+import serverConfig from '../../../../serverConfig';
+import uploadsConfig from '../../../../uploadsConfig';
 
-export default function Container2() {
+export default function Container3() {
+  const [handwerks, setHandwerks] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0);
-  const total = handwerks.length;
 
+  useEffect(() => {
+    axios
+      .get(`${serverConfig}/handwerks`)
+      .then((res) => setHandwerks(res.data))
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
+
+  const total = handwerks.length;
   const visibleHandwerks = [
     handwerks[(index - 1 + total) % total],
     handwerks[index % total],
@@ -18,25 +30,31 @@ export default function Container2() {
     handwerks[(index + 2) % total],
   ];
 
+  if (loading) return <div className={classes.loading}>Laden...</div>;
+
   return (
     <div className={classes.container}>
       <div className={classes.sectionWrapper}>
         <div className={classes.contentRow}>
           <div className={classes.carousel}>
-            {visibleHandwerks.map((item, i) => (
+            {visibleHandwerks.map((project, i) => (
               <div
-                key={item.id}
+                key={project.id}
                 className={`${classes.slide} ${
                   i === 1 ? classes.activeSlide : ''
                 }`}
               >
-                <img src={item.images[0]} alt={`Reinigung ${item.id}`} />
+                <img
+                  src={`${uploadsConfig}${project.images[0]}`}
+                  alt={project.title}
+                />
               </div>
             ))}
           </div>
 
           <div className={classes.textBlock}>
-            <span>Handwerk</span>
+            <span>Handwerk </span>
+            {/* <span>{projects[index].description}</span> */}
           </div>
         </div>
 
@@ -52,9 +70,8 @@ export default function Container2() {
           </span>
         </div>
       </div>
-
-      <span className={classes.title}>Handwerk</span>
-
+      <span className={classes.title}>Aufbau</span>
+      {/* ✅ Мобильный Swiper */}
       <div className={classes.containerMobile}>
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -64,10 +81,16 @@ export default function Container2() {
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           loop
         >
-          {handwerks.map((item) => (
-            <SwiperSlide key={item.id}>
+          {handwerks.map((project) => (
+            <SwiperSlide key={project.id}>
               <div className={classes.mobileSlide}>
-                <img src={item.images[0]} alt={`Reinigung ${item.id}`} />
+                <img
+                  src={`${uploadsConfig}${project.images[0]}`}
+                  alt={project.title}
+                />
+                {/* <span className={classes.description}>
+                  {project.description}
+                </span> */}
               </div>
             </SwiperSlide>
           ))}

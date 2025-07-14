@@ -6,32 +6,32 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { reinigung } from '../../../../../bd';
-// import axios from 'axios';
-// import serverConfig from '../../../../serverConfig';
-// import uploadsConfig from '../../../../uploadsConfig';
+import axios from 'axios';
+import serverConfig from '../../../../serverConfig';
+import uploadsConfig from '../../../../uploadsConfig';
 
 export default function Container2() {
-  // const [reinigungs, setReinigungs] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [index, setIndex] = useState(0);
+  const [reinigungs, setReinigungs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [index, setIndex] = useState(0);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`${serverConfig}/reinigungs`)
-  //     .then((res) => setReinigungs(res.data))
-  //     .catch(console.error)
-  //     .finally(() => setLoading(false));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(`${serverConfig}/reinigungs`)
+      .then((res) => setReinigungs(res.data))
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
 
-  // const total = reinigungs.length;
-  // const visibleReinigungs = [
-  //   reinigungs[(index - 1 + total) % total],
-  //   reinigungs[index % total],
-  //   reinigungs[(index + 1) % total],
-  //   reinigungs[(index + 2) % total],
-  // ];
+  const total = reinigungs.length;
+  const visibleReinigungs = [
+    reinigungs[(index - 1 + total) % total],
+    reinigungs[index % total],
+    reinigungs[(index + 1) % total],
+    reinigungs[(index + 2) % total],
+  ];
 
-  // if (loading) return <div className={classes.loading}>Laden...</div>;
+  if (loading) return <div className={classes.loading}>Laden...</div>;
 
   return (
     <div className={classes.container}>
