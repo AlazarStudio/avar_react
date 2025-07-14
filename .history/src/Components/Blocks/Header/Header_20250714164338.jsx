@@ -40,6 +40,8 @@ function Header() {
               <Link to="/unserTeam">Unser Team</Link>
             </li>
 
+         
+
             <li>
               <Link to="/kontakt">Kontakt</Link>
             </li>
@@ -82,6 +84,9 @@ function Header() {
               >
                 Über uns
               </li>
+              <li>
+                <Link to="/dienstleistungen">Dienstleistungen</Link>
+              </li>
               <li
                 onClick={() => {
                   navigate('/unserTeam');
@@ -100,11 +105,11 @@ function Header() {
               </li>
               <li
                 onClick={() => {
-                  navigate('/dienstleistungen');
+                  navigate('/services');
                   setMenuOpen(false);
                 }}
               >
-                Dienstleistungen
+                Services
               </li>
               <li
                 onClick={() => {

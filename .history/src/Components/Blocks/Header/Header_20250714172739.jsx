@@ -5,7 +5,7 @@ import classes from './Header.module.css';
 function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const isOneProjectPage = location.pathname.includes('projekte/');
 
@@ -81,6 +81,9 @@ function Header() {
                 }}
               >
                 Über uns
+              </li>
+              <li>
+                <Link to="/dienstleistungen">Dienstleistungen</Link>
               </li>
               <li
                 onClick={() => {

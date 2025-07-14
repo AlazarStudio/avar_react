@@ -82,6 +82,9 @@ function Header() {
               >
                 Über uns
               </li>
+              <li>
+                <Link to="/dienstleistungen">Dienstleistungen</Link>
+              </li>
               <li
                 onClick={() => {
                   navigate('/unserTeam');
@@ -100,11 +103,11 @@ function Header() {
               </li>
               <li
                 onClick={() => {
-                  navigate('/dienstleistungen');
+                  navigate('/services');
                   setMenuOpen(false);
                 }}
               >
-                Dienstleistungen
+                Services
               </li>
               <li
                 onClick={() => {

@@ -15,8 +15,8 @@ a {
 }
 
 img {
-  pointer-events: none;
-  user-select: none;
+  /* pointer-events: none; */
+  /* user-select: none; */
 }
 
 body {

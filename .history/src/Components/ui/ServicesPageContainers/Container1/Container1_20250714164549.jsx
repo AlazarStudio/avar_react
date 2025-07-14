@@ -10,9 +10,9 @@ export default function Container1() {
         <span className={classes.container1BlockTitle}>Dienstleistungen</span>
         <div className={classes.container1BlockText}>
           <span>
-            Die aufgeführten Leistungen bieten wir einzeln,- aber auch als
-            Komplettpaket zusammen an. Lassen Sie sich vom Team AVAR die last
-            von den schultern nehmen.
+            Unsere Leistungen bieten wir teilweise aber auch in einem vollen
+            Angebotzusammen an. Es ist Ihre Entscheidung, ob das Team AVAR Ihnen
+            das Projekterleichtert.
           </span>
         </div>
       </div>

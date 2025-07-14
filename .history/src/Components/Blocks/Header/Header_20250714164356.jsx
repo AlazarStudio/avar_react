@@ -82,6 +82,9 @@ function Header() {
               >
                 Über uns
               </li>
+              <li>
+                <Link to="/dienstleistungen">Dienstleistungen</Link>
+              </li>
               <li
                 onClick={() => {
                   navigate('/unserTeam');

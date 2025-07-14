@@ -14,10 +14,10 @@ a {
     --blockWidth: 1300px;
 }
 
-img {
-  pointer-events: none;
-  user-select: none;
-}
+/* img {
+  /* pointer-events: none; */
+  /* user-select: none; */
+} */
 
 body {
     background-color: #ECECEC;

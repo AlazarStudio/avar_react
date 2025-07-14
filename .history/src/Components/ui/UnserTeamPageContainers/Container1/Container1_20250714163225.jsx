@@ -16,7 +16,7 @@ export default function Container1() {
         <div className={classes.containerBlockRight}>
           <div className={classes.containerBlockRightEl}>
             <div className={classes.containerBlockRightElText}>
-              <span>SHAMIL ABAKAROV</span>
+              <span>S</span>
               <span>Geschäftsführer</span>
             </div>
             <img src="../images/unserTeam11.png" />

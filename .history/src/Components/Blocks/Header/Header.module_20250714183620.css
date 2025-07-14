@@ -9,9 +9,9 @@
   position: relative;
 }
 
-.container img {
-  pointer-events: all;
-  user-select: all;
+img {
+  pointer-events: none;
+  user-select: none;
 }
 
 .header {

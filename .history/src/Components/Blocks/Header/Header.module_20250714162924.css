@@ -9,11 +9,6 @@
   position: relative;
 }
 
-.container img {
-  pointer-events: all;
-  user-select: all;
-}
-
 .header {
   display: flex;
   align-items: center;

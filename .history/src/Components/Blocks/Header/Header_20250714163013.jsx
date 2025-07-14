@@ -28,24 +28,23 @@ function Header() {
               <Link to="/überUns">Über uns</Link>
             </li>
             <li>
-              <Link to="/dienstleistungen">Dienstleistungen</Link>
-            </li>
-            <li>
-              <Link to="/projekte">Projekte</Link>
+              <Link to="/unserTeam">Unser Team</Link>
             </li>
             <li>
               <Link to="/bewertungen">Bewertungen</Link>
             </li>
             <li>
-              <Link to="/unserTeam">Unser Team</Link>
+              <Link to="/services">Services</Link>
             </li>
-
+            <li>
+              <Link to="/projekte">Projekte</Link>
+            </li>
             <li>
               <Link to="/kontakt">Kontakt</Link>
             </li>
             <li>
               <a className={classes.w} href="tel:0431/79939875">
-                Call Us
+                Call Us123
               </a>
             </li>
           </ul>
@@ -100,11 +99,11 @@ function Header() {
               </li>
               <li
                 onClick={() => {
-                  navigate('/dienstleistungen');
+                  navigate('/services');
                   setMenuOpen(false);
                 }}
               >
-                Dienstleistungen
+                Services
               </li>
               <li
                 onClick={() => {
