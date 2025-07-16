@@ -88,13 +88,13 @@ export const ProjectEdit = (props) => (
       <TextInput source="title" label="Название" fullWidth />
       <TextInput source="description" label="Описание" />
       <BooleanInput source="favorite" label="Избранное" />
-      {/* <ReferenceInput
+      <ReferenceInput
         source="categoryId"
         reference="categories"
         label="Категория"
       >
         <SelectInput optionText="title" />
-      </ReferenceInput> */}
+      </ReferenceInput>
 
       <ImageInput
         source="imagesRaw"

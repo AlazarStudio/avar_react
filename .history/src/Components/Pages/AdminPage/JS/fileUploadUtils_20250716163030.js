@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
 import uploadsConfig from '../../../../uploadsConfig';
-import serverConfig from '../../../../serverConfig';
 
 const token = Cookies.get('token');
 
@@ -115,7 +114,7 @@ export const handleSaveWithImages = async (data) => {
   const upload = async (images) => {
     const formData = new FormData();
     images.forEach((file) => formData.append('files', file.rawFile));
-    const res = await fetch(`${serverConfig}/upload`, {
+    const res = await fetch('http://localhost:5000/api/upload, {
       method: 'POST',
       body: formData,
     });

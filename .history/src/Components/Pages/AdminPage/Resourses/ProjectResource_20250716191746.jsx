@@ -32,13 +32,13 @@ export const ProjectList = (props) => (
       <TextField source="id" label="ID" />
       <TextField source="title" label="Название" />
       <TextField source="description" label="Описание" />
-      {/* <ReferenceField
+      <ReferenceField
         source="categoryId"
         reference="categories"
         label="Категория"
       >
         <TextField source="title" />
-      </ReferenceField> */}
+      </ReferenceField>
 
       <FunctionField
         label="Изображения"
@@ -61,13 +61,13 @@ export const ProjectCreate = (props) => (
       <TextInput source="title" label="Название" fullWidth />
       <TextInput source="description" label="Описание" />
       <BooleanInput source="favorite" label="Избранное" />
-      {/* <ReferenceInput
+      <ReferenceInput
         source="categoryId"
         reference="categories"
         label="Категория"
       >
         <SelectInput optionText="title" />
-      </ReferenceInput> */}
+      </ReferenceInput>
 
       <ImageInput
         source="imagesRaw"
@@ -88,13 +88,13 @@ export const ProjectEdit = (props) => (
       <TextInput source="title" label="Название" fullWidth />
       <TextInput source="description" label="Описание" />
       <BooleanInput source="favorite" label="Избранное" />
-      {/* <ReferenceInput
+      <ReferenceInput
         source="categoryId"
         reference="categories"
         label="Категория"
       >
         <SelectInput optionText="title" />
-      </ReferenceInput> */}
+      </ReferenceInput>
 
       <ImageInput
         source="imagesRaw"
