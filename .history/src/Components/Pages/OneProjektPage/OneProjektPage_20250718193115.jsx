@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { projects } from '../../../../bd'; // Импортируем данные
 import classes from './OneProjektPage.module.css';
-import axios from 'axios';
 import Container1 from '../../ui/OneProjektPageContainers/Container1/Container1';
 import Container2 from '../../ui/OneProjektPageContainers/Container2/Container2';
-import serverConfig from '../../../serverConfig';
 
 export default function OneProjectPage() {
   const { id } = useParams();

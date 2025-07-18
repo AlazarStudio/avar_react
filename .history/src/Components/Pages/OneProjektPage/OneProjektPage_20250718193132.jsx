@@ -4,7 +4,6 @@ import classes from './OneProjektPage.module.css';
 import axios from 'axios';
 import Container1 from '../../ui/OneProjektPageContainers/Container1/Container1';
 import Container2 from '../../ui/OneProjektPageContainers/Container2/Container2';
-import serverConfig from '../../../serverConfig';
 
 export default function OneProjectPage() {
   const { id } = useParams();
@@ -13,7 +12,7 @@ export default function OneProjectPage() {
 
   useEffect(() => {
     axios
-      .get(`${serverConfig}/projects/${id}`)
+      .get(`${serverConfiG}/projects/${id}`)
       .then((res) => setProject(res.data))
       .catch(console.error)
       .finally(() => setLoading(false));

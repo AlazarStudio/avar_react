@@ -7,7 +7,6 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import uploadsConfig from '../../../../uploadsConfig';
 
 export default function Container2({ project }) {
   const prevRef = useRef(null);
@@ -20,6 +19,7 @@ export default function Container2({ project }) {
   if (!project) {
     return <div>Загрузка...</div>; // Можно отобразить какой-то индикатор загрузки, если project ещё не загружен
   }
+  
 
   return (
     <div className={classes.container2}>
@@ -50,12 +50,9 @@ export default function Container2({ project }) {
               1024: { slidesPerView: 3 },
             }}
           >
-            {project.images.map((image, index) => (
+            {`${uploadsConfig}${project.images[0]}`.map((image, index) => (
               <SwiperSlide key={index}>
-                <img
-                  src={`${uploadsConfig}${image}`}
-                  alt={`Project image ${index + 1}`}
-                />
+                <img src={image} alt={`Project image ${index + 1}`} />
               </SwiperSlide>
             ))}
 

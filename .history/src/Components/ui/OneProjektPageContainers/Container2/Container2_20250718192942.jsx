@@ -1,25 +1,25 @@
-import React, { useRef, useEffect } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import classes from './Container2.module.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import axios from 'axios';
 import uploadsConfig from '../../../../uploadsConfig';
+import serverConfig from '../../../../serverConfig';
 
-export default function Container2({ project }) {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+export default function Container2() {
+  const { id } = useParams();
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const prevDesktopRef = useRef(null);
-  const nextDesktopRef = useRef(null);
+  useEffect(() => {
+    axios
+      .get(`${serverConfig}/projects/${id}`)
+      .then((res) => setProject(res.data))
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, [id]);
 
-  // Проверка на null или undefined для объекта project
-  if (!project) {
-    return <div>Загрузка...</div>; // Можно отобразить какой-то индикатор загрузки, если project ещё не загружен
-  }
+  if (loading) return <div>Загрузка...</div>;
+  if (!project) return <div>Проект не найден</div>;
 
   return (
     <div className={classes.container2}>
@@ -52,10 +52,7 @@ export default function Container2({ project }) {
           >
             {project.images.map((image, index) => (
               <SwiperSlide key={index}>
-                <img
-                  src={`${uploadsConfig}${image}`}
-                  alt={`Project image ${index + 1}`}
-                />
+                <img src={image} alt={`Project image ${index + 1}`} />
               </SwiperSlide>
             ))}
 

@@ -7,7 +7,6 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import uploadsConfig from '../../../../uploadsConfig';
 
 export default function Container2({ project }) {
   const prevRef = useRef(null);
