@@ -20,6 +20,8 @@ function HomePage({ children, ...props }) {
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+
     if (location.hash === '#beratung') {
       container2Ref.current?.scrollIntoView({
         behavior: 'smooth',

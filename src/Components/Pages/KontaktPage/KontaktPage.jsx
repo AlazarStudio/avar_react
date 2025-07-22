@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './KontaktPage.module.css';
 import Container1 from '../../ui/KontaktPageContainers/Container1/Container1';
 import Container2 from '../../ui/KontaktPageContainers/Container2/Container2';
 import Container3 from '../../ui/KontaktPageContainers/Container3/Container3';
 
 export default function KontaktPage() {
+   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
   return (
     <div className={classes.container}>
       <Container1 />

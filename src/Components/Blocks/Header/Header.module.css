@@ -107,7 +107,7 @@
   height: 40px !important;
   cursor: pointer;
   transition: none;
-  padding: 0;
+  padding: 0 !important;
   border-bottom: none;
   background-color: #e55645 !important;
   border-radius: 10px;

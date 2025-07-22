@@ -138,7 +138,7 @@ export default function Container2({ project }) {
           >
             {project.images.map((image, index) => (
               <SwiperSlide key={index}>
-                <img src={image} alt={`Project image ${index + 1}`} />
+                <img src={`${uploadsConfig}${image}`} alt={`Project image ${index + 1}`} />
               </SwiperSlide>
             ))}
             {/* <div

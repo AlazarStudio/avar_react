@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './ServicesPage.module.css';
 import Container1 from '../../ui/ServicesPageContainers/Container1/Container1';
 import Container2 from '../../ui/ServicesPageContainers/Container2/Container2';
@@ -9,6 +9,9 @@ import Container7 from '../../ui/HomePageContainers/Container7/Container7';
 import Container8 from '../../ui/HomePageContainers/Container8/Container8';
 
 export default function ServicesPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
   return (
     <div className={classes.container}>
       <Container1 />

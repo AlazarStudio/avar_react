@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './ProjektePage.module.css';
 import Container1 from '../../ui/ProjektePageContainers/Container1/Container1';
 import Container2 from '../../ui/ProjektePageContainers/Container2/Container2';
@@ -7,6 +7,9 @@ import Container4 from '../../ui/ProjektePageContainers/Container4/Container4';
 import Container9 from '../../ui/HomePageContainers/Container9/Container9';
 
 export default function ProjektePage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
   return (
     <div className={classes.container}>
       <Container1 />

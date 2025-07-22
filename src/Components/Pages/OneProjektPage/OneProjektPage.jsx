@@ -7,6 +7,9 @@ import Container2 from '../../ui/OneProjektPageContainers/Container2/Container2'
 import serverConfig from '../../../serverConfig';
 
 export default function OneProjectPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
   const { id } = useParams();
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
