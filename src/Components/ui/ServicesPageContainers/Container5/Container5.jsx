@@ -21,7 +21,7 @@ export default function Container5() {
             <span>
               02. <span></span>
             </span>
-            <span>Termin Fur Baustart</span>
+            <span>Termin für Baustart</span>
             <span>
               Wir vereinbaren ein Termin für den Baustart Ihres Objekt. Vorab
               klären wir alle Kleinigkeiten wie Schlüsselübergabe und ähnliches.

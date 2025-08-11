@@ -6,7 +6,7 @@ export default function Container4() {
     <div className={classes.container4}>
       <div className={classes.container4Block}>
         <div className={classes.container4BlockTop}>
-          <img src="../images/services4.png" />
+          <img src="../images/3vis.png" />
           <span>Sie Wollen Ein Angebot?</span>
           <span>
             Gerne besprechen wir Ihr Projekt und erstellen Ihnen zeitnah eine

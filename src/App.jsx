@@ -11,6 +11,9 @@ import OneProjektPage from './Components/Pages/OneProjektPage/OneProjektPage';
 import KontaktPage from './Components/Pages/KontaktPage/KontaktPage';
 import UnserTeamPage from './Components/Pages/UnserTeamPage/UnserTeamPage';
 import BewertungenPage from './Components/Pages/BewertungenPage/BewertungenPage';
+import ImpressumPage from './Components/Pages/ImpressumPage/ImpressumPage';
+import DatenPage from './Components/Pages/DatenPage/DatenPage';
+import AGB from './Components/Pages/AGB/AGB';
 
 function App() {
   return (
@@ -24,10 +27,12 @@ function App() {
         <Route path="kontakt" element={<KontaktPage />} />
         <Route path="unserTeam" element={<UnserTeamPage />} />
         <Route path="bewertungen" element={<BewertungenPage />} />
+        <Route path="Impressum" element={<ImpressumPage />} />
+        <Route path="Datenschutz" element={<DatenPage />} />
+        <Route path="AGB" element={<AGB />} />
       </Route>
 
       <Route path="/admin/*" element={<AdminPage />} />
-
     </Routes>
   );
 }

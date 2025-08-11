@@ -6,7 +6,7 @@ export default function Container2() {
     <div className={classes.container2}>
       <div className={classes.container2Block}>
         <img
-          src="../images/UberCon2.png"
+          src="../images/uberr.png"
           className={classes.container2BlockImg}
         />
         <div className={classes.container2BlockRight}>

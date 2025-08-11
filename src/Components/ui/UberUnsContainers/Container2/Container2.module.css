@@ -16,6 +16,7 @@
 .container2BlockImg {
   width: 559px;
   height: 640px;
+  object-fit: cover;
 }
 
 .container2BlockRight {

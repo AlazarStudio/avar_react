@@ -48,30 +48,64 @@ function Footer({ children, ...props }) {
                 machen Ihr Wunsch wahr.
               </span>
               <span>
-                <img src="../images/footerF.svg" />
-                <img src="../images/footerT.svg" />
-                <img src="../images/footerY.svg" />
-                <img src="../images/footerI.svg" />
+                <a
+                  href="https://www.instagram.com/avar_kiel?igsh=MWFkczFmanA1MDJ1Ng=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="../images/footerI.svg" alt="Instagram" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@avar_kiel?_t=ZN-8yfsSIXdfWQ&_r=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="../images/footerTik.svg" alt="TikTok" />
+                </a>
+                <a
+                  href="https://www.facebook.com/share/199RyRPNRF/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="../images/footerF.svg" alt="Facebook" />
+                </a>
               </span>
             </div>
             <div className={classes.containerBlockBottomBlockAll}>
               <span>Kontakt Informationen</span>
               <span>Aalborgring 4, 24109 Kiel</span>
-              <span>0431/72971683</span>
-              <span>0178/5029999</span>
+              <span>0431/79939875</span>
+              <span>0160/1229999</span>
               <span>info@avar-kiel.de</span>
             </div>
             <div className={classes.containerBlockBottomBlockAll}>
               <span>Schnelle Links</span>
-              <span>Datenschutz</span>
-              <span>Impressum</span>
+              <span onClick={() => navigate('/Datenschutz')}>Datenschutz</span>
+              <span onClick={() => navigate('/Impressum')}>Impressum</span>
+              <span onClick={() => navigate('/AGB')}>AGB</span>
             </div>
             <div className={classes.containerBlockBottomBlockAll}>
               <span>Unsere Leistungen</span>
-              <span>Interior Design</span>
-              <span>Sanierung</span>
-              <span>Trockenbau</span>
-              <span>Bodenbelag</span>
+              <span onClick={() => navigate('/Reinigung')}>Reinigung</span>
+              <span onClick={() => navigate('/Elektroarbeiten')}>
+                Elektroarbeiten{' '}
+              </span>
+              <span onClick={() => navigate('/Sanitär')}>
+                Sanitär - und Heizungsarbeiten
+              </span>
+              <span onClick={() => navigate('/Malerarbeiten')}>
+                Malerarbeiten{' '}
+              </span>
+              <span onClick={() => navigate('/Trockenbau')}>Trockenbau </span>
+              <span onClick={() => navigate('/Pflasterverlegung')}>
+                Pflasterverlegung und Grünpflege
+              </span>
+              <span onClick={() => navigate('/Bodenbelagsarbeiten')}>
+                Bodenbelagsarbeiten
+              </span>
+              <span onClick={() => navigate('/InteriorDesign')}>
+                Interior Design
+              </span>
             </div>
           </div>
         </div>

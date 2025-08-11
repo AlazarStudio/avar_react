@@ -32,10 +32,27 @@ export default function Container1({ onScrollClick }) {
               Aalborgring 4, 24109 Kiel
             </span>
             <div className={classes.contact}>
-              <img src="../images/coolicon (1).svg" />
-              <img src="../images/coolicon (2).svg" />
-              <img src="../images/coolicon (3).svg" />
-              <img src="../images/coolicon (4).svg" />
+              <a
+                href="https://www.instagram.com/avar_kiel?igsh=MWFkczFmanA1MDJ1Ng=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../images/coolicon (4).svg" alt="Instagram" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@avar_kiel?_t=ZN-8yfsSIXdfWQ&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../images/tikTokAvar.svg" alt="TikTok" />
+              </a>
+              <a
+                href="https://www.facebook.com/share/199RyRPNRF/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../images/coolicon (1).svg" alt="Facebook" />
+              </a>
             </div>
           </div>
         </div>

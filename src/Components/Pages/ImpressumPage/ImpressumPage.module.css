@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 829px;
+  background: linear-gradient(rgba(92, 99, 170, 0.59), rgba(92, 99, 170, 0.59)),
+    url('../images/impressum.jpg') center/cover no-repeat;
+}
+
+.containerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  background-color: #fff;
+  padding: 31px 89px;
+  border-radius: 30px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.infoBlock {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  margin-top: 50px;
+  gap: 70px;
+  width: 100%;
+}
+
+.infoBlock span {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.two span:nth-of-type(1) {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.infoBlockLeft {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 40px;
+}
+
+.infoBlockLeftTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBlockLeftTop span:nth-of-type(1) {
+  font-weight: 700;
+}
+
+.infoBlockLeftBottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBlockRight {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 40px;
+}
+
+.infoBlockRightTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBlockRightBottom {
+  display: flex;
+  flex-direction: column;
+}
+
+

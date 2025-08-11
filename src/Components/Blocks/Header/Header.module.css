@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.themeAGB {
+  background-color: #000322 !important;
+}
+
 .container {
   transition: transform 0.3s ease, background-color 0.3s ease;
   position: sticky;
@@ -85,13 +89,13 @@
   font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
   border-bottom: 1px solid inherit;
 }
 
 .navigate a:hover {
   color: #e55645;
-  border-bottom: 1px solid #e55645;
+  /* border-bottom: 1px solid #e55645; */
   transition: color 0.6s ease;
 }
 
@@ -130,6 +134,120 @@
 .mobileModal {
   display: none;
 }
+
+.hasDropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  /* padding-bottom: 4px; */
+  border-bottom: 1px solid inherit;
+  background-color: inherit;
+  border: none;
+}
+
+.dropdownToggle:hover {
+  color: #e55645;
+  /* border-bottom: 1px solid #e55645; */
+
+  transition: color 0.6s ease;
+}
+
+.chevron {
+  transform: translateY(1px);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 320px;
+  background: #0a0e22; /* глубокий тёмно-синий */
+  color: #fff;
+  border-radius: 14px;
+  padding: 14px 14px 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+}
+
+.dropdownTitle {
+  opacity: 0.6;
+  font-size: 12px;
+  margin: 2px 8px 8px;
+}
+
+.dropdownList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dropdownList li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.dropdownList li a:hover {
+  /* background: rgba(255, 255, 255, 0.06); */
+  color: #e55645;
+}
+
+.mobileAccordion {
+}
+.dropdownToggleMobile {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
+.dropdownListMobile {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #000322;
+  z-index: 1;
+  width: 350px !important;
+  margin-right: 150px;
+  margin-top: 180px;
+}
+.dropdownListMobile li {
+  padding: 10px;
+  background-color: #000322;
+}
+.dropdownListMobile li:last-child {
+  border-bottom: 0;
+}
+
+/* .dropdownItemBtn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdownItemBtn:hover {
+  color: #e55645;
+} */
 
 @media (max-width: 768px) {
   .container {
@@ -204,6 +322,7 @@
 
   .mobileModalContent li {
     display: flex;
+    text-align: center;
     width: 250px;
     /* margin: 1rem 0; */
     font-size: 18px;
@@ -214,7 +333,7 @@
     border-radius: 15px;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid red; */
   }
 
   .w {
@@ -253,5 +372,54 @@
       transform: translateX(0);
       opacity: 1;
     }
+  }
+
+  /* Мобилка */
+  .mobileAccordion ul {
+  }
+  .dropdownToggleMobile {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+  }
+  .dropdownListMobile {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #000322;
+    z-index: 1;
+    width: 350px !important;
+    margin-right: 150px;
+    margin-top: 180px;
+  }
+  .dropdownListMobile li {
+    padding: 10px;
+    background-color: #000322;
+  }
+  .dropdownListMobile li:last-child {
+    border-bottom: 0;
+  }
+
+  .dropdownItemBtn {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .dropdownItemBtn:hover {
   }
 }

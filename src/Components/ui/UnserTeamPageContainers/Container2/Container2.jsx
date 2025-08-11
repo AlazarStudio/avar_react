@@ -67,7 +67,7 @@ export default function Container2() {
           <div className={classes.containerBlockElLeftText}>
             <span></span>
             <div className={classes.containerBlockElLeftTextLeft}>
-              <span>ANASTASIA HONOROVA</span>
+              <span>ANASTASIA HOVOROVA</span>
               <span>Objektleitung </span>
             </div>
             <div className={classes.containerBlockElLeftTextRight}>
