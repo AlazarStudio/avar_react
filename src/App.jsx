@@ -14,6 +14,15 @@ import BewertungenPage from './Components/Pages/BewertungenPage/BewertungenPage'
 import ImpressumPage from './Components/Pages/ImpressumPage/ImpressumPage';
 import DatenPage from './Components/Pages/DatenPage/DatenPage';
 import AGB from './Components/Pages/AGB/AGB';
+import ReinigungPage from './Components/Pages/unsereLeistungen/ReinigungPage';
+import ElektroarbeitenPage from './Components/Pages/unsereLeistungen/ElektroarbeitenPage';
+import SanitarPage from './Components/Pages/unsereLeistungen/SanitarPage';
+import MalerarbeitenPage from './Components/Pages/unsereLeistungen/MalerarbeitenPage';
+import TrockenbauPage from './Components/Pages/unsereLeistungen/TrockenbauPage';
+import PflasterverlegungPage from './Components/Pages/unsereLeistungen/PflasterverlegungPage';
+import BodenbelagsarbeitenPage from './Components/Pages/unsereLeistungen/BodenbelagsarbeitenPage';
+import InteriorPage from './Components/Pages/unsereLeistungen/InteriorPage';
+import FliesenverlegungPage from './Components/Pages/unsereLeistungen/FliesenverlegungPage';
 
 function App() {
   return (
@@ -30,6 +39,18 @@ function App() {
         <Route path="Impressum" element={<ImpressumPage />} />
         <Route path="Datenschutz" element={<DatenPage />} />
         <Route path="AGB" element={<AGB />} />
+        <Route path="Reinigung" element={<ReinigungPage />} />
+        <Route path="Elektroarbeiten" element={<ElektroarbeitenPage />} />
+        <Route path="Sanitar" element={<SanitarPage />} />
+        <Route path="Malerarbeiten" element={<MalerarbeitenPage />} />
+        <Route path="Trockenbau" element={<TrockenbauPage />} />
+        <Route path="Pflasterverlegung" element={<PflasterverlegungPage />} />
+        <Route path="InteriorDesign" element={<InteriorPage />} />
+        <Route path="Fliesenverlegung" element={<FliesenverlegungPage />} />
+        <Route
+          path="Bodenbelagsarbeiten"
+          element={<BodenbelagsarbeitenPage />}
+        />
       </Route>
 
       <Route path="/admin/*" element={<AdminPage />} />

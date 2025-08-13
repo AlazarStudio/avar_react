@@ -106,6 +106,9 @@ function Footer({ children, ...props }) {
               <span onClick={() => navigate('/InteriorDesign')}>
                 Interior Design
               </span>
+              <span onClick={() => navigate('/Fliesenverlegung')}>
+                Fliesenverlegung
+              </span>
             </div>
           </div>
         </div>

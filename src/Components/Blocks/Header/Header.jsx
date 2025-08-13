@@ -18,6 +18,15 @@ const getHeaderThemeClass = (pathname) => {
   if (pathname.startsWith('/AGB')) return 'themeAGB';
   if (pathname.startsWith('/Datenschutz')) return 'themeAGB';
   if (pathname.startsWith('/Impressum')) return 'themeAGB';
+  if (pathname.startsWith('/Reinigung')) return 'themeAGB';
+  if (pathname.startsWith('/Elektroarbeiten')) return 'themeAGB';
+  if (pathname.startsWith('/Sanitar')) return 'themeAGB';
+  if (pathname.startsWith('/Malerarbeiten')) return 'themeAGB';
+  if (pathname.startsWith('/Trockenbau')) return 'themeAGB';
+  if (pathname.startsWith('/Pflasterverlegung')) return 'themeAGB';
+  if (pathname.startsWith('/Bodenbelagsarbeiten')) return 'themeAGB';
+  if (pathname.startsWith('/InteriorDesign')) return 'themeAGB';
+  if (pathname.startsWith('/Fliesenverlegung')) return 'themeAGB';
 
   // дефолт
   return 'themeDefault';
