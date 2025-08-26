@@ -11,11 +11,14 @@ import 'swiper/css/pagination';
 import axios from 'axios';
 import serverConfig from '../../../../serverConfig';
 import uploadsConfig from '../../../../uploadsConfig';
+import { useNavigate } from 'react-router-dom';
 // import { projects } from '../../../../../bd';
 
 export default function Container6() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -51,7 +54,10 @@ export default function Container6() {
               .filter((el) => el.favorite === true)
               .map((project) => (
                 <SwiperSlide key={project.id}>
-                  <div className={classes.container6BlockBottomEl}>
+                  <div
+                    className={classes.container6BlockBottomEl}
+                    onClick={() => navigate(`/projekte/${project.id}`)}
+                  >
                     <img src={`${uploadsConfig}${project.images[0]}`} />
                     {/* <img src={project.images[0]} /> */}
                     <span>{project.title}</span>

@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: center;
   background-color: #fff;
 }
 
@@ -52,10 +53,17 @@
   line-height: 150%;
   width: 482px;
   color: #8c93a6;
+  max-height: 643px; /* или конкретное значение, например 600px */
+  overflow-y: auto;
+  padding-right: 8px; /* чтобы текст не прилипал к скроллу */
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .containerRightText span:nth-of-type(1) {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 700;
   color: #000;
   line-height: 100%;
@@ -97,12 +105,16 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;
-    width: 100%;
+    width: 100% !important;
     color: #8c93a6;
+    max-height: 1643px; /* или конкретное значение, например 600px */
+    overflow-y: auto;
+    padding-right: 8px;
+    margin-bottom: 40px;
   }
 
   .containerRightText span:nth-of-type(1) {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #000;
     line-height: 100%;

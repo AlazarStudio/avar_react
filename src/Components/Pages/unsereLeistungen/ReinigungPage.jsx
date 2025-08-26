@@ -6,7 +6,7 @@ import LeftMenu from './LeftMenu';
 export default function ReinigungPage() {
   const navigate = useNavigate();
 
-     useEffect(() => {
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
   return (
@@ -14,18 +14,57 @@ export default function ReinigungPage() {
       <LeftMenu />
       <div className={classes.containerRight}>
         <div className={classes.containerRightText}>
-          <span>Unterhalts- und Fensterreinigung</span>
           <span>
-            Die Reinigungsbranche ist eine äußerst wichtige und sehr
-            anspruchsvolle Branche. Das Team AVAR bewies sich als ein
-            kompetenter Partner für unserer Kunden.{' '}
+            Professionelle Unterhalts- und Glasreinigung in Kiel,
+            Norddeutschland & deutschlandweit
           </span>
           <span>
-            Klein angefangen, aber durch Qualität und Niveau zu einem führenden
-            Unternehmen in Kieler Raum geworden. Das Team AVAR bewies, dass
-            Qualität sich auszeichnet berichtet stolz, dass wir als Unternehmen
-            ständig wachsen und neue Kunden gewinnen, überzeugen und
-            faszinieren. Schauen Sie sich unserer Reverenzen an!
+            Sauberkeit ist unsere Leidenschaft – und Ihr Vorteil. Als erfahrenes
+            Reinigungsunternehmen bieten wir Ihnen erstklassige
+            Unterhaltsreinigung und Glasreinigung für private, gewerbliche und
+            öffentliche Objekte. Unser Team von AVAR arbeitet zuverlässig,
+            gründlich und flexibel – genau so, wie Sie es von einem
+            professionellen Partner erwarten.
+          </span>
+          <span className={classes.bold}>
+            Unterhaltsreinigung – für dauerhaft gepflegte Räume
+          </span>
+          <span>
+            Mit unserer regelmäßigen Unterhaltsreinigung sorgen wir dafür, dass
+            Ihre Räumlichkeiten stets einen gepflegten und einladenden Eindruck
+            hinterlassen. Ob Büros, Praxen, Verkaufsflächen oder Treppenhäuser –
+            wir reinigen nach festem Plan oder auf Abruf, ganz nach Ihren
+            Bedürfnissen. Wir setzen auf moderne Reinigungstechniken, um höchste
+            Sauberkeit bei gleichzeitig schonender Behandlung Ihrer Oberflächen
+            zu gewährleisten.
+          </span>
+          <span className={classes.bold}>
+            Glasreinigung – streifenfrei und glasklar
+          </span>
+          <span>
+            Ob große Glasfassade, Schaufenster oder private Fensterreinigung –
+            wir bringen jedes Glas zum Strahlen. Unsere erfahrenen
+            Reinigungskräfte sorgen für eine störungsfreie und gründliche
+            Glasreinigung, auch an schwer zugänglichen Stellen. Neben der
+            Reinigung der Glasscheiben übernehmen wir selbstverständlich auch
+            die Rahmen- und Falzreinigung, damit alles wieder wie neu aussieht.
+          </span>
+          <span>
+            Warum AVAR Ihr idealer Partner ist
+            <br /> • Zuverlässig & pünktlich – Wir halten, was wir versprechen.
+            <br />• Flexibel einsetzbar – in Kiel, ganz Norddeutschland und bei
+            Bedarf auch deutschlandweit. <br />• Erfahrenes Team – geschultes
+            Personal für jede Reinigungsaufgabe.
+            <br />• Individuelle Lösungen – Reinigungspläne, die zu Ihren
+            Anforderungen passen.
+          </span>
+          <span>
+            Egal, ob regelmäßige Unterhaltsreinigung oder einmalige
+            Glasreinigung – wir sind für Sie da.
+          </span>
+          <span>
+            📞 Kontaktieren Sie uns jetzt für ein unverbindliches Angebot und
+            überzeugen Sie sich selbst von unserer Arbeit.
           </span>
         </div>
         <img src="../images/rein1.png" />

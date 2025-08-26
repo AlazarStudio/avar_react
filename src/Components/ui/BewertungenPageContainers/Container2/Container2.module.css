@@ -95,7 +95,7 @@
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cov; */
   border-radius: 20px;
 }
 
@@ -103,12 +103,15 @@
   width: 800px;
   height: 500px;
   z-index: 10;
+  position: relative;
 }
 
 .activeSlide img {
+  /* position: absolute; */
+  /* bottom: 0 !important; */
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .slideImage {
@@ -224,4 +227,24 @@
   .controls {
     display: none;
   }
+}
+
+/* для медиа внутри слайдов */
+.media,
+.mediaMobile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* опционально, если у .slide фиксированная высота: */
+.slide .media {
+  height: 100%;
+}
+
+/* плейсхолдер */
+.empty {
+  color: #8c93a6;
+  font-size: 14px;
 }

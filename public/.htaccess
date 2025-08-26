@@ -1,4 +1,19 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
+# Включаем mod_rewrite
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1) Если это реальный файл/папка — отдаем как есть
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 2) Явно отдаем favicon (чтобы не было 500 на /favicon.ico)
+  RewriteRule ^favicon\.ico$ /favicon.ico [L]
+
+  # 3) Не трогаем API/загрузки/статику (путь подставь свой при необходимости)
+  RewriteRule ^(api|uploads|images|assets|static)/ - [L]
+
+  # 4) Всё остальное — на index.html (SPA fallback)
+  RewriteRule . /index.html [L]
+</IfModule>

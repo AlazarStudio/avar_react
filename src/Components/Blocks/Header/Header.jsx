@@ -49,22 +49,22 @@ function Header() {
   const isOneProjectPage = location.pathname.includes('projekte/');
 
   // скрывать/показывать хедер по скроллу
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      setAtTop(currentScroll === 0);
-      if (currentScroll > lastScrollY.current) {
-        setVisible(false);
-        setScrollingUp(false);
-      } else {
-        setVisible(true);
-        setScrollingUp(true);
-      }
-      lastScrollY.current = currentScroll;
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScroll = window.scrollY;
+  //     setAtTop(currentScroll === 0);
+  //     if (currentScroll > lastScrollY.current) {
+  //       setVisible(false);
+  //       setScrollingUp(false);
+  //     } else {
+  //       setVisible(true);
+  //       setScrollingUp(true);
+  //     }
+  //     lastScrollY.current = currentScroll;
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   // закрывать дропдаун при клике вне
   useEffect(() => {
@@ -89,16 +89,7 @@ function Header() {
     <div
       className={`
       ${classes.container}
-      ${classes[getHeaderThemeClass(location.pathname)]}
-      ${isOneProjectPage ? classes.blueBackground : ''}
-      ${visible ? classes.show : classes.hide}
-      ${
-        atTop
-          ? classes.transparent
-          : scrollingUp
-          ? classes.solid
-          : classes.transparent
-      }
+
     `}
     >
       <div className={classes.header}>
@@ -173,7 +164,7 @@ function Header() {
             </li>
             <li>
               <a className={classes.w} href="tel:0431/79939875">
-                Call Us
+                Rufen sie uns an
               </a>
             </li>
           </ul>
@@ -287,7 +278,7 @@ function Header() {
               </li>
               <li>
                 <a className={classes.w} href="tel:0431/79939875">
-                  Call Us
+                  Rufen sie uns an
                 </a>
               </li>
             </ul>

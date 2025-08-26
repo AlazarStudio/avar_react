@@ -49,7 +49,7 @@
 
 .container2BlockLeftBottomEl {
   display: flex;
-  width: 40%;
+  width: 100%;
   gap: 16px;
 }
 
@@ -69,9 +69,10 @@
 
 .container2BlockLeftBottomElRight {
   display: flex;
+  flex-wrap: nowrap;
   /* justify-content: center; */
   flex-direction: column;
-  width: 180px;
+  /* width: 180px; */
 }
 
 .container2BlockLeftBottomElRight span:nth-of-type(1) {
@@ -80,7 +81,7 @@
   justify-content: start;
   background-color: inherit;
   border-radius: 0;
-  width: 180px;
+  width: 280px;
   line-height: 150%;
   height: 24px;
   font-size: 16px;
@@ -243,7 +244,8 @@
 
   .container2BlockLeftBottomEl {
     display: flex;
-    width: 260px;
+    align-items: center;
+    width: 100%;
     gap: 16px;
   }
 
@@ -264,7 +266,7 @@
   .container2BlockLeftBottomElRight {
     display: flex;
     flex-direction: column;
-    width: 180px;
+    /* width: 100%; */
   }
 
   .container2BlockLeftBottomElRight span:nth-of-type(1) {
@@ -273,7 +275,7 @@
     justify-content: start;
     background-color: inherit;
     border-radius: 0;
-    width: 180px;
+    width: 100%;
     line-height: 150%;
     height: 24px;
     font-size: 16px;

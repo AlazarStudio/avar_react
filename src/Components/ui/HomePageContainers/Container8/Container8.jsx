@@ -36,12 +36,12 @@ export default function Container8() {
             <div className={classes.container8BlockBottom1}>
               <Swiper
                 modules={[Pagination, Autoplay]}
-                slidesPerView={2}
+                slidesPerView={3}
                 autoplay={{
                   delay: 4000,
                   disableOnInteraction: false,
                 }}
-                spaceBetween={30}
+                spaceBetween={20}
                 loop={true}
                 style={{ paddingLeft: '15px', paddingRight: '15px' }}
                 // navigation
@@ -49,7 +49,7 @@ export default function Container8() {
                 breakpoints={{
                   320: { slidesPerView: 1 },
                   768: { slidesPerView: 2 },
-                  // 1024: { slidesPerView: 3 },
+                  1024: { slidesPerView: 3 },
                 }}
               >
                 {feedbacks.map((review) => (

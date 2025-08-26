@@ -66,7 +66,6 @@ export default function Container2() {
       });
 
       await axios.post(`${serverConfig}/beratungs`, formData);
-      
 
       setModalOpen(false);
       alert('Gesendet!');
@@ -139,7 +138,7 @@ export default function Container2() {
                 <img src="../images/kontakt4.svg" />
               </span>
               <div className={classes.container2BlockLeftBottomElRight}>
-                <span>Call Us</span>
+                <span>Rufen sie uns an</span>
                 <span>0431/79939875</span>
                 <span>0160/1229999</span>
               </div>
@@ -149,7 +148,7 @@ export default function Container2() {
                 <img src="../images/kontakt2.svg" />
               </span>
               <div className={classes.container2BlockLeftBottomElRight}>
-                <span>Email Us</span>
+                <span>Schreiben sie uns eine Email</span>
                 <span>info@avar-kiel.de</span>
               </div>
             </div>
