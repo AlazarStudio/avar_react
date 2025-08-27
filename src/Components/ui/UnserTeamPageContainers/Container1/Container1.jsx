@@ -9,8 +9,9 @@ export default function Container1() {
         <div className={classes.containerBlockLeft}>
           <span>Unser Team</span>
           <span>
-            Ein umfangreiches Team an Handwerkern mit langjähriger Erfahrung
-            zeichnet sich in Ihrem Bauprojekt positiv aus.
+            Ein umfangreiches Team an Handwerkern und fachlich geschulten
+            Reinigungspersonal mit langjähriger Erfahrung zeichnet sich in Ihrem
+            Objekt positiv aus.
           </span>
         </div>
         <div className={classes.containerBlockRight}>

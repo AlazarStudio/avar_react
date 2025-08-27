@@ -428,3 +428,108 @@
   .dropdownItemBtn:hover {
   }
 }
+
+/* ――― Кнопка звонка и меню — стили как у футера ――― */
+
+/* Кнопка звонка в мобилке — всегда читаемый цвет */
+/* ПК: фиксируем видимость текста и не даём .w сжать кнопку до 84px */
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: auto !important; /* переопределяем .w */
+  height: 40px !important; /* оставляем высоту из .w */
+  padding: 0 14px !important; /* нормальные боковые отступы */
+  white-space: nowrap; /* чтобы текст не переносился */
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  color: #fff !important; /* всегда белый текст на тёмном хедере */
+}
+.callBtn:focus,
+.callBtn:active,
+.callBtn[aria-expanded='true'] {
+  color: #fff !important; /* при открытом меню цвет не меняем */
+  opacity: 1;
+}
+
+/* ПК: выпадающее меню как всплывашка; ставим max-content, чтобы не "давило" кнопку */
+.callMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%; /* центр относительно кнопки */
+  transform: translateX(-50%);
+  min-width: 210px;
+  width: max-content; /* по содержимому */
+  background: #fff;
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  z-index: 9999; /* поверх навигации */
+}
+
+/* элементы меню */
+.callItem {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #111 !important;
+  text-decoration: none;
+}
+.callItem:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Обёртка вокруг кнопки — позволяет меню выходить за пределы li */
+.callWrapper {
+  position: relative;
+  overflow: visible;
+}
+
+/* Мобилка: оставляем твои правки, но подчистим, чтобы меню не занимало всю ширину */
+.callMenuMobile {
+  position: absolute;
+  bottom: calc(100% + 19px);
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 8px;
+  min-width: 210px;
+  width: max-content; /* не тянем на 100% */
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 9999;
+  list-style: none;
+}
+.callMenuMobile li {
+  padding: 0;
+  background: transparent !important;
+}
+
+.callMenuMobile li:nth-of-type(1) {
+  padding-top: 20px;
+}
+
+.callMenuMobile li:nth-of-type(2) {
+  padding-bottom: 20px;
+}
+
+/* Кнопка в мобилке — всегда читабельный цвет */
+.callBtnMobile {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff !important;
+}
+.dropdownToggleMobile:focus,
+.dropdownToggleMobile:active,
+.dropdownToggleMobile[aria-expanded='true'] {
+  color: #fff !important;
+  opacity: 1;
+}

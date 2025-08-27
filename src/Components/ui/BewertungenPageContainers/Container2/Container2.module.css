@@ -196,7 +196,7 @@
   .mobileSlide img {
     /* width: 200px; */
     height: 280px;
-    object-fit: cover;
+    object-fit:fill;
     margin-bottom: 60px;
   }
 

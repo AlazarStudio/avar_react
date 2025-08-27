@@ -109,7 +109,7 @@ export default function Container2() {
     <div className={classes.container2}>
       <div className={classes.container2Block}>
         <div className={classes.container2BlockLeft}>
-          <span>Wir Freuen Uns uber Ihr Interesse</span>
+          <span>Wir Freuen Uns über Ihr Interesse</span>
           <span>
             Gerne nehmen wir uns die Zeit mit Ihnen Ihr Bauvorhaben persönlich
             zu besprechen, Ideen für die Umsetzung zu liefern und Sie positiv zu
@@ -130,7 +130,7 @@ export default function Container2() {
               </span>
               <div className={classes.container2BlockLeftBottomElRight}>
                 <span>Address</span>
-                <span>Aalborgring 4, 24109 Kie</span>
+                <span>Aalborgring 4, 24109 Kiel</span>
               </div>
             </div>
             <div className={classes.container2BlockLeftBottomEl}>
@@ -138,7 +138,7 @@ export default function Container2() {
                 <img src="../images/kontakt4.svg" />
               </span>
               <div className={classes.container2BlockLeftBottomElRight}>
-                <span>Rufen sie uns an</span>
+                <span>Rufen Sie uns an</span>
                 <span>0431/79939875</span>
                 <span>0160/1229999</span>
               </div>
@@ -148,7 +148,7 @@ export default function Container2() {
                 <img src="../images/kontakt2.svg" />
               </span>
               <div className={classes.container2BlockLeftBottomElRight}>
-                <span>Schreiben sie uns eine Email</span>
+                <span>Schreiben Sie uns eine Email</span>
                 <span>info@avar-kiel.de</span>
               </div>
             </div>

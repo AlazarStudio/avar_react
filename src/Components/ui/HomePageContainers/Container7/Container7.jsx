@@ -13,7 +13,7 @@ export default function Container7() {
           </div>
           <div className={classes.container7BlockRight}>
             <div className={classes.container7BlockRightEl}>
-              <span>Das Sagen Unsere Uber Uns</span>
+              <span>Das Sagen Unsere Über Uns</span>
               <span>
                 «Wir möchten uns von Herzen bei der Firma AVAR bedanken, die
                 unser altes Einfamilienhaus in ein wahres Traumhaus verwandelt

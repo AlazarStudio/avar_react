@@ -5,17 +5,14 @@ export default function Container2() {
   return (
     <div className={classes.container2}>
       <div className={classes.container2Block}>
-        <img
-          src="../images/uberr.png"
-          className={classes.container2BlockImg}
-        />
+        <img src="../images/uberr.png" className={classes.container2BlockImg} />
         <div className={classes.container2BlockRight}>
           <span>Ein Starkes Team Mit Anspruchsvollen Zielen.</span>
           <span>
-            Eine Vision, die zunächst einmal unvorstellbar erschien, aberdurch
-            fließ und glaube an uns selbst heute vor der Tür liegt.Das Team AVAR
-            biete Ihnen ein Spektrum von Leistungen rundum ihr Projekt und
-            unterstütz Sie dabei sorglos den Tag zudurchleben, weil wir uns um
+            Eine Vision, die zunächst einmal unvorstellbar erschien, aber durch
+            Fleiß und Glaube an uns selbst heute vor der Tür liegt. Das Team
+            AVAR bietet Ihnen ein Spektrum von Leistungen rundum Ihr Projekt und
+            unterstützt Sie dabei sorglos den Tag zu durchleben, weil wir uns um
             alles kümmern.
           </span>
           <div className={classes.container2BlockRightBottom}>

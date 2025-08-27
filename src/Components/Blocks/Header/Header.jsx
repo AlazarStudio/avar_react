@@ -14,84 +14,57 @@ const SERVICES = [
   { label: 'Fliesenverlegung', path: '/Fliesenverlegung' },
 ];
 
-const getHeaderThemeClass = (pathname) => {
-  if (pathname.startsWith('/AGB')) return 'themeAGB';
-  if (pathname.startsWith('/Datenschutz')) return 'themeAGB';
-  if (pathname.startsWith('/Impressum')) return 'themeAGB';
-  if (pathname.startsWith('/Reinigung')) return 'themeAGB';
-  if (pathname.startsWith('/Elektroarbeiten')) return 'themeAGB';
-  if (pathname.startsWith('/Sanitar')) return 'themeAGB';
-  if (pathname.startsWith('/Malerarbeiten')) return 'themeAGB';
-  if (pathname.startsWith('/Trockenbau')) return 'themeAGB';
-  if (pathname.startsWith('/Pflasterverlegung')) return 'themeAGB';
-  if (pathname.startsWith('/Bodenbelagsarbeiten')) return 'themeAGB';
-  if (pathname.startsWith('/InteriorDesign')) return 'themeAGB';
-  if (pathname.startsWith('/Fliesenverlegung')) return 'themeAGB';
-
-  // дефолт
-  return 'themeDefault';
-};
-
 function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [atTop, setAtTop] = useState(true);
-  const [scrollingUp, setScrollingUp] = useState(true);
-
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  // выбор номера (как в футере)
+  const [callOpen, setCallOpen] = useState(false); // desktop
+  const [callOpenMobile, setCallOpenMobile] = useState(false); // mobile
+  const callRef = useRef(null);
+  const callMobileRef = useRef(null);
+
   const dropdownRef = useRef(null);
   const mobileDropdownRef = useRef(null);
-  const lastScrollY = useRef(0);
 
-  const isOneProjectPage = location.pathname.includes('projekte/');
-
-  // скрывать/показывать хедер по скроллу
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScroll = window.scrollY;
-  //     setAtTop(currentScroll === 0);
-  //     if (currentScroll > lastScrollY.current) {
-  //       setVisible(false);
-  //       setScrollingUp(false);
-  //     } else {
-  //       setVisible(true);
-  //       setScrollingUp(true);
-  //     }
-  //     lastScrollY.current = currentScroll;
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
-  // закрывать дропдаун при клике вне
+  // клик вне и Esc — закрыть
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      const inDesktop =
-        dropdownRef.current && dropdownRef.current.contains(e.target);
-      const inMobile =
-        mobileDropdownRef.current &&
-        mobileDropdownRef.current.contains(e.target);
-
-      if (!inDesktop && !inMobile) setServicesOpen(false);
+    const onClickOutside = (e) => {
+      if (callRef.current && !callRef.current.contains(e.target))
+        setCallOpen(false);
+      if (callMobileRef.current && !callMobileRef.current.contains(e.target))
+        setCallOpenMobile(false);
+      if (
+        servicesOpen &&
+        !dropdownRef.current?.contains(e.target) &&
+        !mobileDropdownRef.current?.contains(e.target)
+      ) {
+        setServicesOpen(false);
+      }
     };
-
-    if (servicesOpen) document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    const onEsc = (e) => {
+      if (e.key === 'Escape') {
+        setCallOpen(false);
+        setCallOpenMobile(false);
+        setServicesOpen(false);
+      }
+    };
+    document.addEventListener('click', onClickOutside);
+    document.addEventListener('keydown', onEsc);
+    return () => {
+      document.removeEventListener('click', onClickOutside);
+      document.removeEventListener('keydown', onEsc);
+    };
   }, [servicesOpen]);
 
   // закрывать меню услуг при смене маршрута
   useEffect(() => setServicesOpen(false), [location.pathname]);
 
   return (
-    <div
-      className={`
-      ${classes.container}
-
-    `}
-    >
+    <div className={classes.container}>
       <div className={classes.header}>
         <div className={classes.headerLeft}>
           <img src="../images/logoHome.png" onClick={() => navigate('/')} />
@@ -106,7 +79,7 @@ function Header() {
               <Link to="/überUns">Über uns</Link>
             </li>
 
-            {/* Dienstleistungen с выпадающим меню */}
+            {/* Dienstleistungen (desktop) */}
             <li className={classes.hasDropdown} ref={dropdownRef}>
               <button
                 type="button"
@@ -115,7 +88,7 @@ function Header() {
                 aria-haspopup="true"
                 aria-expanded={servicesOpen}
               >
-                Dienstleistungen
+                Dienstleistungen{' '}
                 <span className={classes.chevron} aria-hidden>
                   ▾
                 </span>
@@ -162,10 +135,44 @@ function Header() {
             <li>
               <Link to="/kontakt">Kontakt</Link>
             </li>
-            <li>
-              <a className={classes.w} href="tel:0431/79939875">
-                Rufen sie uns an
-              </a>
+
+            {/* ОДНА КНОПКА → выбор номера (desktop), стили как в футере */}
+            <li ref={callRef} className={classes.callWrapper}>
+              <button
+                type="button"
+                onClick={() => setCallOpen((v) => !v)}
+                aria-expanded={callOpen}
+                aria-haspopup="menu"
+                className={`${classes.w} ${classes.callBtn}`}
+              >
+                {/* <img src="../images/footerCall.svg" alt="" /> */}
+                Rufen Sie uns an
+              </button>
+
+              {callOpen && (
+                <div
+                  role="menu"
+                  className={classes.callMenu}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <a
+                    role="menuitem"
+                    href="tel:+4943179939875"
+                    className={classes.callItem}
+                    onClick={() => setCallOpen(false)}
+                  >
+                    0431 / 79939875
+                  </a>
+                  <a
+                    role="menuitem"
+                    href="tel:+491601229999"
+                    className={classes.callItem}
+                    onClick={() => setCallOpen(false)}
+                  >
+                    0160 / 1229999
+                  </a>
+                </div>
+              )}
             </li>
           </ul>
         </div>
@@ -204,7 +211,7 @@ function Header() {
                 Über uns
               </li>
 
-              {/* Аккордеон в мобилке */}
+              {/* Dienstleistungen (mobile) */}
               <li className={classes.mobileAccordion} ref={mobileDropdownRef}>
                 <button
                   type="button"
@@ -217,12 +224,9 @@ function Header() {
                     ▾
                   </span>
                 </button>
-
                 {servicesOpen && (
                   <ul
-                    className={
-                      classes.dropdownListMobile /* тот же стиль, что на ПК */
-                    }
+                    className={classes.dropdownListMobile}
                     onClick={(e) => e.stopPropagation()}
                   >
                     {SERVICES.map(({ label, path }) => (
@@ -276,10 +280,53 @@ function Header() {
               >
                 Kontakt
               </li>
-              <li>
-                <a className={classes.w} href="tel:0431/79939875">
-                  Rufen sie uns an
-                </a>
+
+              {/* «как в футере» — выбор номера (mobile) */}
+              <li
+                className={`${classes.mobileAccordion} ${classes.callWrapper}`}
+                ref={callMobileRef}
+              >
+                <button
+                  type="button"
+                  className={`${classes.dropdownToggleMobile} ${classes.callBtnMobile}`}
+                  onClick={() => setCallOpenMobile((v) => !v)}
+                  aria-expanded={callOpenMobile}
+                >
+                  {/* <img src="../images/footerCall.svg" alt="" /> */}
+                  Rufen Sie uns an
+                </button>
+
+                {callOpenMobile && (
+                  <ul
+                    className={` ${classes.callMenuMobile}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <li>
+                      <a
+                        href="tel:+4943179939875"
+                        className={classes.callItem}
+                        onClick={() => {
+                          setCallOpenMobile(false);
+                          setMenuOpen(false);
+                        }}
+                      >
+                        0431 / 79939875
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="tel:+491601229999"
+                        className={classes.callItem}
+                        onClick={() => {
+                          setCallOpenMobile(false);
+                          setMenuOpen(false);
+                        }}
+                      >
+                        0160 / 1229999
+                      </a>
+                    </li>
+                  </ul>
+                )}
               </li>
             </ul>
           </div>

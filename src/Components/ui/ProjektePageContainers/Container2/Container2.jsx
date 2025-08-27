@@ -9,14 +9,14 @@ export default function Container2() {
           <span>Komplett Modernisierung</span>
           <span>
             <img src="../images/location.svg" />
-            Projensdorfer Straße 110, 24106 Kie
+            Projensdorfer Straße 110, 24106 Kiel
           </span>
         </div>
         <div className={classes.container2BlockCenter}>
           Bei diesem Projekt entwickelte AVAR ein komplettes Interior Design für
-          denInnenbereich, setzte diesen dann erfolgreich um, sodass der Kunde
-          zufrieden war.Wir achten darauf Sie als Kunde stets auf dem Laufendem
-          zu halten, sodass Sieimmer einen Überblick haben
+          den Innenbereich, setzte diesen dann erfolgreich um, dass der Kunde
+          zufrieden war. Wir achten darauf Sie als Kunde stets auf dem Laufendem
+          zu halten, sodass Sie immer einen Überblick behalten
         </div>
         <div className={classes.container2BlockRight}>
           <span>

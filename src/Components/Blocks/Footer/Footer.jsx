@@ -40,7 +40,7 @@ function Footer({ children, ...props }) {
               <span>
                 Sichern Sie sich jetzt kostenlos und unverbindlich eine Beratung
                 von AVAR und lassen Sie sich überzeugen von unseren Visionen und
-                derenUmsetzungsideen. Wir schaffen Perfektion!
+                deren Umsetzungsideen. Wir schaffen Perfektion!
               </span>
               <span style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                 <button onClick={handleScrollClick}>
